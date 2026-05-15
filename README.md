@@ -1,1 +1,1 @@
-# Dual Thermostat Card - Masonry Dual Thermostat Card
+# Emelya Breezer Card - Masonry Emelya Breezer Card
