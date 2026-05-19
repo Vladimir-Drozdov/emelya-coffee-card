@@ -528,6 +528,7 @@ class EmelyaCoffeeCard extends LitElement {
   render() {
     const entity = this.config?.entity;
     const coffeeEntity = this.config?.coffee_entity;
+    const coffeeState = this.hass?.states?.[coffeeEntity];
     const isSingleEntity = !coffeeEntity || coffeeEntity === entity;
     const modeStateObj = isSingleEntity
       ? this.hass?.states?.[entity]
