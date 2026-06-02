@@ -165,7 +165,7 @@ class EmelyaCoffeeCard extends LitElement {
       hold_action: { action: "none" },
       double_tap_action: { action: "none" },
       title: "Кофеварка",
-      // ИЗМЕНЕНИЕ: label_on по умолчанию пустой - тогда трюк показывает текущий режим.
+      // ИЗМЕНЕНИЕ: label_on по умолчанию пустой - тогда показывает текущий режим.
       // Если задать явно ("Включено") - перекрывает режим, как в оригинале.
       label_on: "",
       label_off: "Выключено",
@@ -536,7 +536,6 @@ class EmelyaCoffeeCard extends LitElement {
       ? this.config.background_image
       : `${this.base}/images/container-images/coffee_machine.png`;
 
-    // ИЗМЕНЕНИЕ: тот же трюк что в dishwasher-карточке.
     // Приоритет: label_on (статичный) → mode_labels[режим] (переименованный) → сырой режим → "Включено"
     // Если label_on пустой (дефолт) - в правом углу виден текущий режим.
     const stateLabel = this.power
