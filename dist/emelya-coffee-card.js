@@ -165,8 +165,7 @@ class EmelyaCoffeeCard extends LitElement {
       hold_action: { action: "none" },
       double_tap_action: { action: "none" },
       title: "Кофеварка",
-      // ИЗМЕНЕНИЕ: label_on по умолчанию пустой - тогда показывает текущий режим.
-      // Если задать явно ("Включено") - перекрывает режим, как в оригинале.
+      // label_on по умолчанию пустой - тогда показывает текущий режим.
       label_on: "",
       label_off: "Выключено",
       entity: "",
@@ -760,7 +759,7 @@ class EmelyaCoffeeCardEditor extends LitElement {
         },
         {
           name: "coffee_entity",
-          // ИЗМЕНЕНИЕ: необязательный - у некоторых кофеварок нет режимов
+          // необязательный - у некоторых кофеварок нет режимов
           required: false,
           selector: { entity: { domain: ["input_select", "select", "fan"] } }
         },
