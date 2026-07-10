@@ -164,8 +164,7 @@ class EmelyaCoffeeCard extends LitElement {
       tap_action: { action: "more-info" },
       hold_action: { action: "none" },
       double_tap_action: { action: "none" },
-      title: "Кофеварка",
-      // label_on по умолчанию пустой - тогда показывает текущий режим.
+      title: "",
       label_on: "",
       label_off: "Выключено",
       entity: "",
@@ -535,6 +534,7 @@ class EmelyaCoffeeCard extends LitElement {
       ? this.config.background_image
       : `${this.base}/images/container-images/coffee_machine.png`;
 
+    // ИЗМЕНЕНИЕ: тот же трюк что в dishwasher-карточке.
     // Приоритет: label_on (статичный) → mode_labels[режим] (переименованный) → сырой режим → "Включено"
     // Если label_on пустой (дефолт) - в правом углу виден текущий режим.
     const stateLabel = this.power
@@ -586,7 +586,7 @@ class EmelyaCoffeeCard extends LitElement {
 
   static getStubConfig() {
     return {
-      title: "Кофеварка",
+      title: "",
       label_on: "",
       label_off: "Выключено",
       entity: "",
@@ -759,7 +759,7 @@ class EmelyaCoffeeCardEditor extends LitElement {
         },
         {
           name: "coffee_entity",
-          // необязательный - у некоторых кофеварок нет режимов
+          // ИЗМЕНЕНИЕ: необязательный - у некоторых кофеварок нет режимов
           required: false,
           selector: { entity: { domain: ["input_select", "select", "fan"] } }
         },
